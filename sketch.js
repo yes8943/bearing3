@@ -106,17 +106,7 @@ function draw() {
   
   }
 
-function touchStarted () {
-  var fs = fullscreen();
-  if (!fs) {
-    fullscreen(true);
-  }
-}
 
-/* full screening will change the size of the canvas */
-function windowResized() {
-  resizeCanvas(windowWidth, windowHeight);
-}
 
 
 function checkSound() { // 이름은 체크하세요.
@@ -169,6 +159,20 @@ function checkSound() { // 이름은 체크하세요.
     }
     */
 }
+
+function touchStarted () {
+  var fs = fullscreen();
+  if (!fs) {
+    fullscreen(true);
+  }
+}
+
+/* full screening will change the size of the canvas */
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
+
 
 document.ontouchmove = function(event) {
     event.preventDefault();
